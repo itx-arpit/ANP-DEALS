@@ -236,14 +236,14 @@ body {
     }
 /* Mobile view */
 @media (max-width: 768px) {
-  .carousel-container {
+  .swipper-slide {
     margin-bottom: 10px;
   }
 }
 
 /* Laptop/Desktop view */
 @media (min-width: 769px) {
-  .carousel-container {
+  .swipper-slide {
     margin-bottom: 30px;
   }
 }
