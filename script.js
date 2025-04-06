@@ -135,7 +135,7 @@ const data = [
         image: 'pro14.png',
         oldPrice: 999,
         newPrice: 341,
-        discount: '65'%,
+        discount: '65%',
         category: 'Fashion',
         link: "https://fktr.in/owS1ZlG"
     },
@@ -155,7 +155,7 @@ const data = [
         image: 'pro16.png',
         oldPrice: 950,
         newPrice: 248,
-        discount: '73'%,
+        discount: '73%',
         category: 'Fashion',
         link: "https://fktr.in/9Vhb570"
     },
@@ -165,7 +165,7 @@ const data = [
         image: 'pro17.png',
         oldPrice: 999,
         newPrice: 249,
-        discount: '75'%,
+        discount: '75$',
         category: 'Fashion',
         link: "https://fktr.in/EP5pjmG"
     },
@@ -175,7 +175,7 @@ const data = [
         image: 'pro18.png',
         oldPrice: 799,
         newPrice: 253,
-        discount: '64'%,
+        discount: '64%',
         category: 'Fashion',
         link: "https://bitli.in/CCgPtci"
     },
@@ -185,7 +185,7 @@ const data = [
         image: 'pro19.png',
         oldPrice: 1199,
         newPrice: 243,
-        discount: '77'%,
+        discount: '77%',
         category: 'Fashion',
         link: "https://bitli.in/Lvm1wlY"
     },
@@ -195,7 +195,7 @@ const data = [
         image: 'pro20.png',
         oldPrice: 1899,
         newPrice: 423,
-        discount: '76'%,
+        discount: '76$',
         category: 'Fashion',
         link: "https://bitli.in/roKHp23"
     },
@@ -205,7 +205,7 @@ const data = [
         image: 'pro21.png',
         oldPrice: 1899,
         newPrice: 449,
-        discount: '75'%,
+        discount: '75%',
         category: 'Fashion',
         link: "https://bitli.in/uh3W1s1"
     },
@@ -215,7 +215,7 @@ const data = [
         image: 'pro22.png',
         oldPrice:199 ,
         newPrice: 25,
-        discount: '87'%,
+        discount: '87%',
         category: 'Electronics',
         link: "https://bitli.in/ebZxchc"
     },
@@ -225,9 +225,9 @@ const data = [
         image: 'pro23.png',
         oldPrice: 99,
         newPrice: 36,
-        discount: '63'%,
+        discount: '63%',
         category: 'Electronics',
-        link: ""
+        link: "https://bitli.in/yie82Sp"
     },
      {
         id: '24',
@@ -235,7 +235,7 @@ const data = [
         image: 'pro24.png',
         oldPrice: 4299,
         newPrice: 2799,
-        discount: '34'%,
+        discount: '34%',
         category: 'Fashion',
         link: "https://bitli.in/9f7T1Qy"
     },
@@ -245,7 +245,7 @@ const data = [
         image: 'pro25.png',
         oldPrice: 399,
         newPrice: 110,
-        discount: '72'%,
+        discount: '72%',
         category: 'Accessories',
         link: "https://bitli.in/fjwn2Yr"
     },
@@ -255,7 +255,7 @@ const data = [
         image: 'pro26.png',
         oldPrice: 285,
         newPrice: 148,
-        discount: '48'%,
+        discount: '48%',
         category: 'Electronics',
         link: "https://bitli.in/7kp3BpO"
     },
