@@ -213,26 +213,28 @@ body {
   height: auto;
   max-height: 400px; /* Default max height for larger screens */
   overflow: hidden;
+    margin-bottom: 0;
 }
 
 .swiper-slide img {
   width: 100%;
   height: auto;
   object-fit: cover;
+    margin-bottom: 0;
 }
 
 /* Responsive adjustments for tablets and smaller devices */
 @media screen and (max-width: 768px) {
   .swiper-slide {
     max-height: 250px; /* Adjusted max height for tablets */
-  margin-bottom: 5px;
+  margin-bottom: 0;
   }
 }
 
 /* Responsive adjustments for mobile devices */
 @media screen and (max-width: 480px) {
   .swiper-slide {
-    max-height: 150px; /* Adjusted max height for mobile phones */
-margin-bottom: 5px;
+    max-height: 180px; /* Adjusted max height for mobile phones */
+margin-bottom: 00;
   }
     }
