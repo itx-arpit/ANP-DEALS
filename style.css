@@ -231,7 +231,7 @@ body {
 
 /* Responsive adjustments for mobile devices */
 @media screen and (max-width: 480px) {
-  .swipper-slide {
+  .swiper-slide {
     max-height: 150px; /* Adjusted max height for mobile phones */
 margin-bottom: 5px;
   }
