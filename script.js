@@ -321,27 +321,4 @@ const data = [
   }
   
   renderProducts();
-  // yeh poora script copy karna hoga
-  const loadMoreButton = document.getElementById("loadMore");
-  const productCards = document.querySelectorAll(".product-card");
-  let visibleCount = 20;
-
-  function showProducts() {
-    for (let i = 0; i < productCards.length; i++) {
-      if (i < visibleCount) {
-        productCards[i].style.display = "block";
-      } else {
-        productCards[i].style.display = "none";
-      }
-    }
-
-    if (visibleCount >= productCards.length) {
-      loadMoreButton.style.display = "none";
-    }
-  }
-
-  loadMoreButton.addEventListener("click", () => {
-    visibleCount += 20;
-    showProducts();
-  });
-
+ 
