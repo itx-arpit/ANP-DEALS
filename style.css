@@ -238,3 +238,23 @@ body {
 margin-bottom: 0;
   }
     }
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #25D366;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.whatsapp-link img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover img {
+  transform: scale(1.2);
+}
