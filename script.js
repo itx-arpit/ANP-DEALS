@@ -215,5 +215,3 @@ const data = [
     showProducts();
   });
 
-  // Initial load
-  showProducts();
