@@ -27,6 +27,15 @@
   <input type="text" id="searchInput" placeholder="Search Deals..."/>
 
   <div class="categories" id="categories">
+  <label for="category">Filter by Category:</label>
+  <select id="category" onchange="filterProducts()">
+    <option value="all">All</option>
+    <option value="electronics">Electronics</option>
+    <option value="fashion">Fashion</option>
+    <option value="home">Home</option>
+    <option value="beauty">Beauty</option>
+  </select>
+    </div>
     <!-- Categories will be injected by JS -->
   </div>
   <div class="swiper mySwiper">
