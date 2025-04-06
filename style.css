@@ -207,3 +207,30 @@ body {
   font-size: 13px;
   color: #777;
 }
+/* Default banner styling */
+.swiper-slide {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Default max height for larger screens */
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    max-height: 250px; /* Adjusted max height for tablets */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+  .swipper-slide {
+    max-height: 150px; /* Adjusted max height for mobile phones */
+  }
+    }
