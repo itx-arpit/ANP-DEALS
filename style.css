@@ -226,7 +226,7 @@ body {
 /* Responsive adjustments for tablets and smaller devices */
 @media screen and (max-width: 768px) {
   .swiper-slide {
-    max-height: 250px; /* Adjusted max height for tablets */
+    max-height: 150px; /* Adjusted max height for tablets */
   margin-bottom: 0;
   }
 }
@@ -234,7 +234,7 @@ body {
 /* Responsive adjustments for mobile devices */
 @media screen and (max-width: 480px) {
   .swiper-slide {
-    max-height: 180px; /* Adjusted max height for mobile phones */
-margin-bottom: 00;
+    max-height: 100px; /* Adjusted max height for mobile phones */
+margin-bottom: 0;
   }
     }
