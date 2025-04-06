@@ -321,4 +321,38 @@ const data = [
   }
   
   renderProducts();
+let productCards = [];
+let visibleCount = 20;
+let loading = false;
+
+function showProducts() {
+  for (let i = 0; i < productCards.length; i++) {
+    if (i < visibleCount) {
+      productCards[i].style.display = "block";
+    } else {
+      productCards[i].style.display = "none";
+    }
+  }
+}
+
+function loadMoreOnScroll() {
+  if (
+    window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 &&
+    !loading
+  ) {
+    loading = true;
+    setTimeout(() => {
+      visibleCount += 20;
+      showProducts();
+      loading = false;
+    }, 500); // Delay to mimic load time
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  productCards = Array.from(document.querySelectorAll(".product-card"));
+  showProducts();
+  window.addEventListener("scroll", loadMoreOnScroll);
+});
+
 
