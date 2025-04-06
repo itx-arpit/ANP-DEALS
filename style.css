@@ -234,3 +234,16 @@ body {
     max-height: 150px; /* Adjusted max height for mobile phones */
   }
     }
+/* Mobile view */
+@media (max-width: 768px) {
+  .carousel-container {
+    margin-bottom: 10px;
+  }
+}
+
+/* Laptop/Desktop view */
+@media (min-width: 769px) {
+  .carousel-container {
+    margin-bottom: 30px;
+  }
+}
