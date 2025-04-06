@@ -213,7 +213,7 @@ body {
   height: auto;
   max-height: 400px; /* Default max height for larger screens */
   overflow: hidden;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .swiper-slide img {
