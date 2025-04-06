@@ -6,7 +6,7 @@ const data = [
       oldPrice: 1500,
       newPrice: 277,
       discount: '80%',
-      category: 'fashion',
+      category: 'Fashion',
       link: "https://fktr.in/1biPxnC",
     },
     {
@@ -16,7 +16,7 @@ const data = [
       oldPrice: 699,
       newPrice: 249,
       discount: '65%',
-      category: 'fashion',
+      category: 'Fashion',
       link: "https://fktr.in/q8VD7Xs",
     },
     {
@@ -26,7 +26,7 @@ const data = [
         oldPrice: 999,
         newPrice: 286,
         discount: '70%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/NOJUrAm",
     },
     {
@@ -36,7 +36,7 @@ const data = [
         oldPrice: 1499,
         newPrice: 949,
         discount: '36%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/OYOi5Zj"
     },
 {
@@ -46,7 +46,7 @@ const data = [
         oldPrice: 999,
         newPrice: 342,
         discount: '65%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/Tn25VVW"
     },
     {
@@ -56,7 +56,7 @@ const data = [
         oldPrice: 1499,
         newPrice: 370,
         discount: '75%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/wx9U1Fr"
     },
     {
@@ -66,7 +66,7 @@ const data = [
         oldPrice: 999,
         newPrice: 328,
         discount: '67%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/xapPHhf"
     },
     {
@@ -86,7 +86,7 @@ const data = [
         oldPrice: 2499,
         newPrice: 299,
         discount: '88%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/snMu5VT"
     },
       {
@@ -96,7 +96,7 @@ const data = [
         oldPrice: 3299,
         newPrice: 489,
         discount: '85%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/CLlHJyc"
     },
       {
@@ -106,7 +106,7 @@ const data = [
         oldPrice: 1299,
         newPrice: 633 ,
         discount: '51%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/9mQoMTH"
     },
       {
@@ -116,7 +116,7 @@ const data = [
         oldPrice: 2499,
         newPrice: 492,
         discount: '80%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/69iiG1w"
     },
       {
@@ -126,7 +126,7 @@ const data = [
         oldPrice: 999,
         newPrice: 222,
         discount: '77%',
-        category: 'fashion',
+        category: 'Fashion',
         link: "https://fktr.in/PWj5WPo"
     },
     
