@@ -145,7 +145,7 @@ const data = [
         image: 'pro15.png',
         oldPrice: 999,
         newPrice: 220,
-        discount: '77'%,
+        discount: '77%',
         category: 'Fashion',
         link: "https://fktr.in/xGIF0B2"
     },
@@ -316,11 +316,9 @@ const data = [
         
            <a href="${item.link}" target="_blank" class="buy-btn">BUY NOW</a>
         </div>
-      `;
+      ;
     });
   }
   
   renderProducts();
-}
- renderProducts();
 
