@@ -129,6 +129,257 @@ const data = [
         category: 'Fashion',
         link: "https://fktr.in/PWj5WPo"
     },
+    {
+        id: '14',
+        title: 'Pack of 2 Women Relaxed Black, Maroon Viscose Rayon Trousers',
+        image: 'pro14.png',
+        oldPrice: 999,
+        newPrice: 341,
+        discount: '65'%,
+        category: 'Fashion',
+        link: "https://fktr.in/owS1ZlG"
+    },
+     {
+        id: '15',
+        title: 'Women Relaxed Orange Viscose Rayon Trousers',
+        image: 'pro15.png',
+        oldPrice: 999,
+        newPrice: 220,
+        discount: '77'%,
+        category: 'Fashion',
+        link: "https://fktr.in/xGIF0B2"
+    },
+     {
+        id: '16',
+        title: 'Women Chikan Embroidery Pure Cotton Straight Kurta  (Green)',
+        image: 'pro16.png',
+        oldPrice: 950,
+        newPrice: 248,
+        discount: '73'%,
+        category: 'Fashion',
+        link: "https://fktr.in/9Vhb570"
+    },
+     {
+        id: '17',
+        title: 'Digital Watch - For Men & Women Latest Fashion Green Digital Army Shockproof Trending Designer Best Seller',
+        image: 'pro17.png',
+        oldPrice: 999,
+        newPrice: 249,
+        discount: '75'%,
+        category: 'Fashion',
+        link: "https://fktr.in/EP5pjmG"
+    },
+     {
+        id: '18',
+        title: 'Medium 25 L Backpack DAYPACK Bags Backpack for daily use library office 25 L No Backpack (Black)',
+        image: 'pro18.png',
+        oldPrice: 799,
+        newPrice: 253,
+        discount: '64'%,
+        category: 'Fashion',
+        link: "https://bitli.in/CCgPtci"
+    },
+     {
+        id: '19',
+        title: 'BACKPACK FOR GIRLS AND BOYS 35 L Backpack (Blue)',
+        image: 'pro19.png',
+        oldPrice: 1199,
+        newPrice: 243,
+        discount: '77'%,
+        category: 'Fashion',
+        link: "https://bitli.in/Lvm1wlY"
+    },
+     {
+        id: '20',
+        title: 'Slim Men Blue Jeans',
+        image: 'pro20.png',
+        oldPrice: 1899,
+        newPrice: 423,
+        discount: '76'%,
+        category: 'Fashion',
+        link: "https://bitli.in/roKHp23"
+    },
+     {
+        id: '21',
+        title: 'Slim Men Dark Grey Jeans',
+        image: 'pro21.png',
+        oldPrice: 1899,
+        newPrice: 449,
+        discount: '75'%,
+        category: 'Fashion',
+        link: "https://bitli.in/uh3W1s1"
+    },
+     {
+        id: '22',
+        title: 'BZILO 1 Piece Mini LED Night Natural White USB Light Bulb for Indoor & Outdoor_43 Model_0043 Laptop Accessory (Multicolor)',
+        image: 'pro22.png',
+        oldPrice:199 ,
+        newPrice: 25,
+        discount: '87'%,
+        category: 'Electronics',
+        link: "https://bitli.in/ebZxchc"
+    },
+     {
+        id: '23',
+        title: 'RPMSD Flexible mini USB LED light LED Lamp 5V 1.2W',
+        image: 'pro23.png',
+        oldPrice: 99,
+        newPrice: 36,
+        discount: '63'%,
+        category: 'Electronics',
+        link: ""
+    },
+     {
+        id: '24',
+        title: 'FKU LED TIE LED Tie, Light Up Tie Light Up Neck Ties Man Light Up Fanny Ties Novelty Necktie Led Light (MUTLICOLOURED)',
+        image: 'pro24.png',
+        oldPrice: 4299,
+        newPrice: 2799,
+        discount: '34'%,
+        category: 'Fashion',
+        link: "https://bitli.in/9f7T1Qy"
+    },
+     {
+        id: '25',
+        title: 'AI-302 Vegetable & Fruit Slicer (pack of 1)',
+        image: 'pro25.png',
+        oldPrice: 399,
+        newPrice: 110,
+        discount: '72'%,
+        category: 'Accessories',
+        link: "https://bitli.in/fjwn2Yr"
+    },
+     {
+        id: '26',
+        title: 'VYAR SuperSpeed Hub with High-Speed Data Transfer for PC, Laptop, and Mac Extension',
+        image: 'pro26.png',
+        oldPrice: 285,
+        newPrice: 148,
+        discount: '48'%,
+        category: 'Electronics',
+        link: "https://bitli.in/7kp3BpO"
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+     {
+        id: '',
+        title: '',
+        image: '',
+        oldPrice: ,
+        newPrice: ,
+        discount: ''%,
+        category: 'Fashion',
+        link: ""
+    },
+    
     
     
     // Add more products...
