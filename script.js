@@ -191,5 +191,12 @@ const data = [
   }
   
   renderProducts();
+function filterProducts() {
+  const selectedCategory = document.getElementById('category').value;
+  const filtered = selectedCategory === 'all'
+    ? products
+    : products.filter(p => p.category === selectedCategory);
 
+  displayProducts(filtered);
+}
   
