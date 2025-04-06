@@ -225,6 +225,7 @@ body {
 @media screen and (max-width: 768px) {
   .swiper-slide {
     max-height: 250px; /* Adjusted max height for tablets */
+  margin-bottom: 20px;
   }
 }
 
@@ -232,18 +233,6 @@ body {
 @media screen and (max-width: 480px) {
   .swipper-slide {
     max-height: 150px; /* Adjusted max height for mobile phones */
+margin-bottom: 5px;
   }
     }
-/* Mobile view */
-@media (max-width: 768px) {
-  .swipper-slide {
-    margin-bottom: 10px;
-  }
-}
-
-/* Laptop/Desktop view */
-@media (min-width: 769px) {
-  .swipper-slide {
-    margin-bottom: 30px;
-  }
-}
