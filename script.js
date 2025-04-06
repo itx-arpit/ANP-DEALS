@@ -199,4 +199,22 @@ function filterProducts() {
 
   displayProducts(filtered);
 }
-  
+  const productGrid = document.querySelector('.product-grid');
+
+function displayProducts(productList) {
+  productGrid.innerHTML = "";
+  productList.forEach(product => {
+    const card = document.createElement('div');
+    card.classList.add('product-card');
+    card.setAttribute('data-category', product.category);
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" />
+      <h3>${product.name}</h3>
+      <p>₹${product.price}</p>
+      <a href="${product.link}" class="buy-button">Buy Now</a>
+    `;
+    productGrid.appendChild(card);
+  });
+}
+
+displayProducts(products); // Initial load
