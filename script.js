@@ -22,7 +22,7 @@ const data = [
     {
         id: '3',
         title: 'Men Regular Fit Solid Button Down Collar Formal Shirt',
-        image: 'Screenshot 2025-04-06 075110.png',
+        image: 'pro3.png',
         oldPrice: 999,
         newPrice: 286,
         discount: '70%',
