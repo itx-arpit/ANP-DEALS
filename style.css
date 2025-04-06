@@ -225,7 +225,7 @@ body {
 @media screen and (max-width: 768px) {
   .swiper-slide {
     max-height: 250px; /* Adjusted max height for tablets */
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   }
 }
 
