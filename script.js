@@ -302,7 +302,7 @@ const data = [
       return matchesSearch && matchesCategory;
     });
   
-    productGrid.innerHTML = '';
+    productGrid.innerHTML = ''; `
     filtered.forEach(item => {
       productGrid.innerHTML += 
         <div class="product-card">
@@ -316,7 +316,7 @@ const data = [
         
            <a href="${item.link}" target="_blank" class="buy-btn">BUY NOW</a>
         </div>
-      ;
+      `;
     });
   }
   
