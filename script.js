@@ -135,7 +135,7 @@ const data = [
   
     productGrid.innerHTML = '';
     filtered.forEach(item => {
-      productGrid.innerHTML += 
+      productGrid.innerHTML += ` 
         <div class="product-card">
           <img src="${item.image}" alt="${item.title}"/>
           <div class="product-title">${item.title}</div>
