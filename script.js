@@ -259,24 +259,7 @@ const data = [
         category: 'Electronics',
         link: "https://bitli.in/7kp3BpO"
     },
-    {
-   
-id: '27',
-        title: 'Danish Bhai',
-        image: 'tanish2008.jpg',
-        oldPrice: 5,
-        newPrice: 2,
-        discount: '60%',
-        category: 'Fashion',
-        link: "http://t.me/Tanishh001"
 
-
-
-
-
- }
-
-    
     // Add more products...
   ];
      
