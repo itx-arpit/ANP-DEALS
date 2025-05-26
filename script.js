@@ -263,7 +263,7 @@ const data = [
    
 id: '27',
         title: 'Danish Bhai',
-        image: 'Tanish2008.jpg',
+        image: 'tanish2008.jpg',
         oldPrice: 5,
         newPrice: 2,
         discount: '60%',
