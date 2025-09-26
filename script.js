@@ -76,14 +76,14 @@ function renderProducts() {
     filtered.forEach(item => {
         productGrid.innerHTML += `
         <div class="product-card">
-          <img src="${item.image || 'default.png'}" alt="${item.title || 'No Title'}"/>
-          <div class="product-title">${item.title || 'No Title'}</div>
+          <img src="${item.image}" alt="${item.title}"/>
+          <div class="product-title">${item.title}</div>
           <div class="price">
-            <span class="old-price">₹${item.oldPrice || 0}</span>
-            <span class="new-price"> ₹${item.newPrice || 0}</span>
+            <span class="old-price">₹${item.oldPrice}</span>
+            <span class="new-price"> ₹${item.newPrice}</span>
           </div>
-          <div class="discount">SAVE ${item.discount || '0%'}</div>
-          <a href="${item.link || '#'}" target="_blank" class="buy-btn">BUY NOW</a>
+          <div class="discount">SAVE ${item.discount}</div>
+          <a href="${item.link}" target="_blank" class="buy-btn">BUY NOW</a>
         </div>
       `;
     });
@@ -142,3 +142,12 @@ Papa.parse(csvURL, {
             category: obj.category || "Others",
             link: obj.link || "#"
         }));
+
+        data.push(...sheetProducts);
+        renderProducts();
+        updateProductCards();
+    },
+    error: function(err) {
+        console.log("Error parsing CSV with PapaParse: ", err);
+    }
+});
