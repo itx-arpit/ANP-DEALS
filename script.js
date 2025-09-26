@@ -1,5 +1,4 @@
 // ==================== Hardcoded Products ====================
-// ==================== Hardcoded Products ====================
 const data = [
     { id: '1', title: 'Men black sandal infinite aura', image: 'sandals-vechlo.png', oldPrice: 1500, newPrice: 277, discount: '80%', category: 'Fashion', link: "https://fktr.in/1biPxnC" },
     { id: '2', title: 'Men Solid Round Neck Cotton Blend Black T-Shirt', image: 'pro2.png', oldPrice: 699, newPrice: 249, discount: '65%', category: 'Fashion', link: "https://fktr.in/q8VD7Xs" },
@@ -28,9 +27,6 @@ const data = [
     { id: '25', title: 'AI-302 Vegetable & Fruit Slicer (pack of 1)', image: 'pro25.png', oldPrice: 399, newPrice: 110, discount: '72%', category: 'Accessories', link: "https://bitli.in/fjwn2Yr" },
     { id: '26', title: 'VYAR SuperSpeed Hub with High-Speed Data Transfer for PC, Laptop, and Mac Extension', image: 'pro26.png', oldPrice: 285, newPrice: 148, discount: '48%', category: 'Electronics', link: "https://bitli.in/7kp3BpO" }
 ];
-
-// ==================== Baaki code same rahega jaise maine pehle diya ====================
-// Categories, search, renderProducts(), infinite scroll, Google Sheet fetch, etc.
 
 // ==================== Categories ====================
 const categories = ['All', 'Electronics', 'Accessories', 'Books', 'Fashion'];
@@ -93,7 +89,7 @@ function renderProducts() {
     });
 }
 
-// ==================== Infinite Scroll Functions ====================
+// ==================== Infinite Scroll ====================
 function showProducts() {
     productCards.forEach((card, i) => {
         card.style.display = i < visibleCount ? "block" : "none";
@@ -128,31 +124,33 @@ renderProducts();
 updateProductCards();
 window.addEventListener("scroll", loadMoreOnScroll);
 
-// ==================== Google Sheet Fetch ====================
-const sheetID = "1fVCFwYgiVAHip6kHxgMJCj4UkBi51HOtc8nU965t4w8"; // yahan apna Google Sheet ID daalo
-const sheetURL = "https://docs.google.com/spreadsheets/d/1fVCFwYgiVAHip6kHxgMJCj4UkBi51HOtc8nU965t4w8/edit?usp=drivesdk";
+// ==================== Google Sheet CSV Fetch ====================
+const csvURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrj_Q_WPzGYRdRH2WJL_RCxttW9Dc2DYp5BjFStjmdwsXY28O4E3le1BG3v8aNA2S7kRTq8f9TWVjq/pub?gid=0&single=true&output=csv";
 
-fetch(sheetURL)
-  .then(res => res.json())
-  .then(sheetData => {
-    const sheetProducts = sheetData.feed.entry.map(item => ({
-      id: `sheet-${item.gsx$id?.$t || Math.random()}`,
-      title: item.gsx$name?.$t || "No Title",
-      image: item.gsx$image?.$t || "default.png",
-      oldPrice: item.gsx$oldprice?.$t || 0,
-      newPrice: item.gsx$newprice?.$t || 0,
-      discount: item.gsx$discount?.$t || "0%",
-      category: item.gsx$category?.$t || "Others",
-      link: item.gsx$affiliatelink?.$t || "#"
-    }));
+fetch(csvURL)
+  .then(res => res.text())
+  .then(csvText => {
+    const lines = csvText.split('\n');
+    const headers = lines[0].split(',').map(h => h.trim());
 
-    // Merge existing data with sheet products
+    const sheetProducts = lines.slice(1).map(line => {
+        const values = line.split(',').map(v => v.trim());
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = values[i]);
+        return {
+            id: `sheet-${obj.id || Math.random()}`,
+            title: obj.name || "No Title",
+            image: obj.image || "default.png",
+            oldPrice: parseFloat(obj.oldPrice) || 0,
+            newPrice: parseFloat(obj.newPrice) || 0,
+            discount: obj.discount || "0%",
+            category: obj.category || "Others",
+            link: obj.affiliateLink || "#"
+        };
+    });
+
     data.push(...sheetProducts);
-
-    // Re-render products
     renderProducts();
     updateProductCards();
   })
-  .catch(err => console.log("Error fetching sheet data: ", err));
-
-
+  .catch(err => console.log("Error fetching sheet CSV: ", err));
