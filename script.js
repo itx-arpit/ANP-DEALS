@@ -319,7 +319,65 @@ const data = [
     });
   }
   
-  renderProducts();
+  renderProducts()
+// Google Sheet se products fetch karke merge karne ka code
+const sheetID = "YOUR_SHEET_ID"; // yahan apna Google Sheet ID daalo
+const sheetURL = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+
+fetch(sheetURL)
+  .then(res => res.json())
+  .then(sheetData => {
+    const sheetProducts = sheetData.feed.entry.map(item => ({
+      id: `sheet-${item.gsx$id.$t || Math.random()}`, // unique id for sheet products
+      title: item.gsx$name.$t,
+      image: item.gsx$image.$t,
+      oldPrice: item.gsx$oldprice.$t,
+      newPrice: item.gsx$newprice.$t,
+      discount: item.gsx$discount.$t,
+      category: item.gsx$category.$t,
+      link: item.gsx$affiliatelink.$t
+    }));
+
+    // Merge existing data with sheet products
+    data.push(...sheetProducts);
+
+    // Re-render products with merged data
+    renderProducts();
+
+    // Update infinite scroll cards
+    productCards = Array.from(document.querySelectorAll(".product-card"));
+    showProducts();
+  })
+  .catch(err => console.log("Error fetching sheet data: ", err));// Google Sheet se products fetch karke merge karne ka code
+const sheetID = "YOUR_SHEET_ID"; // yahan apna Google Sheet ID daalo
+const sheetURL = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+
+fetch(sheetURL)
+  .then(res => res.json())
+  .then(sheetData => {
+    const sheetProducts = sheetData.feed.entry.map(item => ({
+      id: `sheet-${item.gsx$id.$t || Math.random()}`, // unique id for sheet products
+      title: item.gsx$name.$t,
+      image: item.gsx$image.$t,
+      oldPrice: item.gsx$oldprice.$t,
+      newPrice: item.gsx$newprice.$t,
+      discount: item.gsx$discount.$t,
+      category: item.gsx$category.$t,
+      link: item.gsx$affiliatelink.$t
+    }));
+
+    // Merge existing data with sheet products
+    data.push(...sheetProducts);
+
+    // Re-render products with merged data
+    renderProducts();
+
+    // Update infinite scroll cards
+    productCards = Array.from(document.querySelectorAll(".product-card"));
+    showProducts();
+  })
+  .catch(err => console.log("Error fetching sheet data: ", err));
+
 let productCards = [];
 let visibleCount = 20;
 let loading = false;
@@ -353,5 +411,6 @@ document.addEventListener("DOMContentLoaded", () => {
   showProducts();
   window.addEventListener("scroll", loadMoreOnScroll);
 });
+
 
 
