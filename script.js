@@ -7,7 +7,7 @@ const data = [
     { id: '5', title: 'Frozen Girls Casual Cotton Lycra Blend Crop Top  (Multicolor, Pack of 1)', image: 'pro5.png', oldPrice: 999, newPrice: 342, discount: '65%', category: 'Fashion', link: "https://fktr.in/Tn25VVW" },
     { id: '6', title: 'Women Regular Fit Self Design Casual Shirt', image: 'pro6.png', oldPrice: 1499, newPrice: 370, discount: '75%', category: 'Fashion', link: "https://fktr.in/wx9U1Fr" },
     { id: '7', title: 'Women Printed Pure Cotton Straight Kurta  (Red)', image: 'pro7.png', oldPrice: 999, newPrice: 328, discount: '67%', category: 'Fashion', link: "https://fktr.in/xapPHhf" },
-    { id: '8', title: 'Forbuz Monster Truck Toy for Kids, Amazing Toys, 360 Degree Stunt Truck  (Red, Green, Violet, Orange', image: 'pro8.png', oldPrice: 399, newPrice: 20, discount: '94%', category: 'Accessories', link: "https://fktr.in/pub0QjN" },
+    { id: '8', title: 'Forbuz Monster Truck Toy for Kids, Amazing Toys, 360 Degree Stunt Truck  (Red, Green, Violet, Orange)', image: 'pro8.png', oldPrice: 399, newPrice: 20, discount: '94%', category: 'Accessories', link: "https://fktr.in/pub0QjN" },
     { id: '9', title: 'Leo Creation 144 TC Cotton Double Jaipuri Prints Flat Bedsheet  (Pack of 1, Blue, Green, Orange, Dark Blue, Black, Brown)', image: 'pro9.png', oldPrice: 2499, newPrice: 299, discount: '88%', category: 'Fashion', link: "https://fktr.in/snMu5VT" },
     { id: '10', title: 'Embellished Bollywood Chiffon Saree  (Dark Green)', image: 'pro10.png', oldPrice: 3299, newPrice: 489, discount: '85%', category: 'Fashion', link: "https://fktr.in/CLlHJyc" },
     { id: '11', title: 'Boys Festive & Party Kurta and Pyjama Set  (Green Pack of 1)', image: 'pro11.png', oldPrice: 1299, newPrice: 633, discount: '51%', category: 'Fashion', link: "https://fktr.in/9mQoMTH" },
@@ -16,10 +16,10 @@ const data = [
     { id: '14', title: 'Pack of 2 Women Relaxed Black, Maroon Viscose Rayon Trousers', image: 'pro14.png', oldPrice: 999, newPrice: 341, discount: '65%', category: 'Fashion', link: "https://fktr.in/owS1ZlG" },
     { id: '15', title: 'Women Relaxed Orange Viscose Rayon Trousers', image: 'pro15.png', oldPrice: 999, newPrice: 220, discount: '77%', category: 'Fashion', link: "https://fktr.in/xGIF0B2" },
     { id: '16', title: 'Women Chikan Embroidery Pure Cotton Straight Kurta  (Green)', image: 'pro16.png', oldPrice: 950, newPrice: 248, discount: '73%', category: 'Fashion', link: "https://fktr.in/9Vhb570" },
-    { id: '17', title: 'Digital Watch - For Men & Women Latest Fashion Green Digital Army Shockproof Trending Designer Best Seller', image: 'pro17.png', oldPrice: 999, newPrice: 249, discount: '75$', category: 'Fashion', link: "https://fktr.in/EP5pjmG" },
+    { id: '17', title: 'Digital Watch - For Men & Women Latest Fashion Green Digital Army Shockproof Trending Designer Best Seller', image: 'pro17.png', oldPrice: 999, newPrice: 249, discount: '75%', category: 'Fashion', link: "https://fktr.in/EP5pjmG" },
     { id: '18', title: 'Medium 25 L Backpack DAYPACK Bags Backpack for daily use library office 25 L No Backpack (Black)', image: 'pro18.png', oldPrice: 799, newPrice: 253, discount: '64%', category: 'Fashion', link: "https://bitli.in/CCgPtci" },
     { id: '19', title: 'BACKPACK FOR GIRLS AND BOYS 35 L Backpack (Blue)', image: 'pro19.png', oldPrice: 1199, newPrice: 243, discount: '77%', category: 'Fashion', link: "https://bitli.in/Lvm1wlY" },
-    { id: '20', title: 'Slim Men Blue Jeans', image: 'pro20.png', oldPrice: 1899, newPrice: 423, discount: '76$', category: 'Fashion', link: "https://bitli.in/roKHp23" },
+    { id: '20', title: 'Slim Men Blue Jeans', image: 'pro20.png', oldPrice: 1899, newPrice: 423, discount: '76%', category: 'Fashion', link: "https://bitli.in/roKHp23" },
     { id: '21', title: 'Slim Men Dark Grey Jeans', image: 'pro21.png', oldPrice: 1899, newPrice: 449, discount: '75%', category: 'Fashion', link: "https://bitli.in/uh3W1s1" },
     { id: '22', title: 'BZILO 1 Piece Mini LED Night Natural White USB Light Bulb for Indoor & Outdoor_43 Model_0043 Laptop Accessory (Multicolor)', image: 'pro22.png', oldPrice:199 , newPrice: 25, discount: '87%', category: 'Electronics', link: "https://bitli.in/ebZxchc" },
     { id: '23', title: 'RPMSD Flexible mini USB LED light LED Lamp 5V 1.2W', image: 'pro23.png', oldPrice: 99, newPrice: 36, discount: '63%', category: 'Electronics', link: "https://bitli.in/yie82Sp" },
@@ -76,14 +76,14 @@ function renderProducts() {
     filtered.forEach(item => {
         productGrid.innerHTML += `
         <div class="product-card">
-          <img src="${item.image}" alt="${item.title}"/>
-          <div class="product-title">${item.title}</div>
+          <img src="${item.image || 'default.png'}" alt="${item.title || 'No Title'}"/>
+          <div class="product-title">${item.title || 'No Title'}</div>
           <div class="price">
-            <span class="old-price">₹${item.oldPrice}</span>
-            <span class="new-price"> ₹${item.newPrice}</span>
+            <span class="old-price">₹${item.oldPrice || 0}</span>
+            <span class="new-price"> ₹${item.newPrice || 0}</span>
           </div>
-          <div class="discount">SAVE ${item.discount}</div>
-          <a href="${item.link}" target="_blank" class="buy-btn">BUY NOW</a>
+          <div class="discount">SAVE ${item.discount || '0%'}</div>
+          <a href="${item.link || '#'}" target="_blank" class="buy-btn">BUY NOW</a>
         </div>
       `;
     });
@@ -142,13 +142,3 @@ Papa.parse(csvURL, {
             category: obj.category || "Others",
             link: obj.link || "#"
         }));
-
-        data.push(...sheetProducts);
-        renderProducts();
-        updateProductCards();
-    },
-    error: function(err) {
-        console.log("Error parsing CSV with PapaParse: ", err);
-    }
-});
-
