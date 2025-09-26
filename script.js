@@ -129,8 +129,8 @@ updateProductCards();
 window.addEventListener("scroll", loadMoreOnScroll);
 
 // ==================== Google Sheet Fetch ====================
-const sheetID = "YOUR_SHEET_ID"; // yahan apna Google Sheet ID daalo
-const sheetURL = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+const sheetID = "1fVCFwYgiVAHip6kHxgMJCj4UkBi51HOtc8nU965t4w8"; // yahan apna Google Sheet ID daalo
+const sheetURL = "https://docs.google.com/spreadsheets/d/1fVCFwYgiVAHip6kHxgMJCj4UkBi51HOtc8nU965t4w8/edit?usp=drivesdk";
 
 fetch(sheetURL)
   .then(res => res.json())
@@ -154,4 +154,5 @@ fetch(sheetURL)
     updateProductCards();
   })
   .catch(err => console.log("Error fetching sheet data: ", err));
+
 
