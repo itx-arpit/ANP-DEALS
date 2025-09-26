@@ -124,20 +124,15 @@ renderProducts();
 updateProductCards();
 window.addEventListener("scroll", loadMoreOnScroll);
 
-// ==================== Google Sheet CSV Fetch ====================
+// ==================== Google Sheet CSV Fetch with PapaParse ====================
 const csvURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRrj_Q_WPzGYRdRH2WJL_RCxttW9Dc2DYp5BjFStjmdwsXY28O4E3le1BG3v8aNA2S7kRTq8f9TWVjq/pub?gid=0&single=true&output=csv";
 
-fetch(csvURL)
-  .then(res => res.text())
-  .then(csvText => {
-    const lines = csvText.split('\n');
-    const headers = lines[0].split(',').map(h => h.trim());
-
-    const sheetProducts = lines.slice(1).map(line => {
-        const values = line.split(',').map(v => v.trim());
-        const obj = {};
-        headers.forEach((h, i) => obj[h] = values[i]);
-        return {
+Papa.parse(csvURL, {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+        const sheetProducts = results.data.map(obj => ({
             id: `sheet-${obj.id || Math.random()}`,
             title: obj.name || "No Title",
             image: obj.image || "default.png",
@@ -146,11 +141,13 @@ fetch(csvURL)
             discount: obj.discount || "0%",
             category: obj.category || "Others",
             link: obj.affiliateLink || "#"
-        };
-    });
+        }));
 
-    data.push(...sheetProducts);
-    renderProducts();
-    updateProductCards();
-  })
-  .catch(err => console.log("Error fetching sheet CSV: ", err));
+        data.push(...sheetProducts);
+        renderProducts();
+        updateProductCards();
+    },
+    error: function(err) {
+        console.log("Error parsing CSV with PapaParse: ", err);
+    }
+});
