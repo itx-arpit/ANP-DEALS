@@ -140,7 +140,7 @@ Papa.parse(csvURL, {
             newPrice: parseFloat(obj.newPrice) || 0,
             discount: obj.discount || "0%",
             category: obj.category || "Others",
-            link: obj.affiliateLink || "#"
+            link: obj.link || "#"
         }));
 
         data.push(...sheetProducts);
@@ -151,3 +151,4 @@ Papa.parse(csvURL, {
         console.log("Error parsing CSV with PapaParse: ", err);
     }
 });
+
